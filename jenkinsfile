@@ -16,11 +16,6 @@ pipeline {
 			// this command builds the project using maven.
 			./mvnw package
 		}
-	  }
-	  
+	  } 
 	}
-
 }
-
-
-
