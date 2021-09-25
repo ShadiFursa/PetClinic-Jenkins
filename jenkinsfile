@@ -1,8 +1,6 @@
 pipeline {
 	// this is the worker node that the pipeline will be run on
 	agent any
-
-
 	stages{
 	  stage('Clone Project'){ // the first stage is to clone the repository from github
 	  	steps{ 
@@ -15,7 +13,7 @@ pipeline {
 			// we move to the directory that the project was cloned to
 			sh 'cd spring-petclinic' 
 			// this command builds the project using maven.
-			sh './mvnw package'
+			sh 'mvnw package'
 		}
 	  }
 	}
