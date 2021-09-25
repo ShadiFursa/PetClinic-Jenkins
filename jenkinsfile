@@ -1,6 +1,7 @@
 pipeline {
 	// this is the worker node that the pipeline will be run on
-	agent slave;
+	agent any
+
 
 	stages{
 	  stage('Clone Project'){ // the first stage is to clone the repository from github
