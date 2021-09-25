@@ -1,11 +1,12 @@
 pipeline {
 	// this is the worker node that the pipeline will be run on
-	agent any
+	agent slave
 	stages{
 	  stage('Clone Project'){ // the first stage is to clone the repository from github
 	  	steps{ 
 			// this line clones the repo
 			git branch: 'main' , url: 'https://github.com/spring-projects/spring-petclinic'
+
 
 		}
 	  }
