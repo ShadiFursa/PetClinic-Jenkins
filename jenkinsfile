@@ -6,19 +6,15 @@ pipeline {
 	  	steps{ 
 			// this line clones the repo
 			sh git clone 'https://github.com/spring-projects/spring-petclinic.git'
-
 		}
 	  }
 	  stage('Build project'){ // the second stage is to build the project that was cloned
-
 	  	steps{
 			// we move to the directory that the project was cloned to
 			sh cd spring-petclinic 
 			// this command builds the project using maven.
 			sh ./mvnw package
-
 		}
-	  } 
+	  }
 	}
 }
-
