@@ -13,7 +13,10 @@ pipeline {
 			// we move to the directory that the project was cloned to
 			sh 'cd spring-petclinic' 
 			// this command builds the project using maven.
-			sh 'mvnw package'
+			script{ 
+				"./mvnw package"
+			}
+
 		}
 	  }
 	}
